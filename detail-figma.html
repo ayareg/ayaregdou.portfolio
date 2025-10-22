@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Détail Projet UX/UI - Aya REGDOU</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Portfo<span>lio</span></a>
+        <nav class="navigation">
+            <a href="index.html#about-section">À propos</a>
+            <a href="index.html#skills">Compétences</a>
+            <a href="index.html#projects">Projets</a>
+            <a href="index.html#Certificats">Certificats</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="menu-icon"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main>
+        
+        <section class="project-detail-hero figma-hero">
+            <div class="hero-content">
+                <h1>Design UX/UI avec Figma</h1>
+                <p class="intro-description">Exploration des processus de conception centrés sur l'utilisateur à travers la création de deux interfaces distinctes : un site d'agence et une plateforme d'e-learning.</p>
+            </div>
+        </section>
+
+        <section class="project-separator">
+            <div class="separator-line"></div>
+            <div class="separator-line"></div>
+        </section>
+        
+        <section class="project-section design-process-section">
+            <h2 class="section-title">Galerie des Maquettes Détaillées</h2>
+
+            <h3 style="text-align: center; margin-top: 40px; color: #333;">Projet 1 : GrowthSpace (Site d'agence)</h3>
+            <!--grouwthspeace project-->
+            <div class="figma-gallery-grid">
+                
+                <div class="figma-gallery-item">
+                    <img src="figma-groxthspeace-hero.png" alt="Maquette de la section Héro du site GrowthSpace" loading="lazy">
+                    <p class="caption">Section Héro (Accueil)</p>
+                </div>
+            
+                <div class="figma-gallery-item">
+                    <img src="figma-growthspeace-service1.png" alt="Maquette de la section Services et Présentation du contenu GrowthSpace" loading="lazy">
+                    <p class="caption">Section Services et Contenu</p>
+                </div>
+                <div class="figma-gallery-item">
+                    <img src="figma-growthspeace-service2.png" alt="Maquette de la section Services et Présentation du contenu GrowthSpace" loading="lazy">
+                    <p class="caption">Section Services et Contenu</p>
+                </div>
+                <div class="figma-gallery-item">
+                    <img src="figma-grouthspeace-about.png" alt="Maquette de la section Services et Présentation du contenu GrowthSpace" loading="lazy">
+                    <p class="caption">Section Services et Contenu</p>
+                </div>
+                <div class="figma-gallery-item">
+                    <img src="figma-grouthspeace-footer.png" alt="Maquette de la section Témoignages et du Pied de Page GrowthSpace" loading="lazy">
+                    <p class="caption">Section Témoignages et Footer</p>
+                </div>
+                
+            </div>
+<!--coursera project-->
+            <h3 style="text-align: center; margin-top: 60px; color: #333;">Projet 2 : Courser (Plateforme d'apprentissage)</h3>
+            
+            <div class="figma-gallery-grid">
+                
+                <div class="figma-gallery-item">
+                    <img src="figma-courser-hero.png" alt="Maquette Héro d'un site de cours en ligne (Courser)" loading="lazy">
+                    <p class="caption">Héro : Design Sombre et Navigation</p>
+                </div>
+                
+                <div class="figma-gallery-item">
+                    <img src="figma-coursera-service.png" alt="Section de présentation des professeurs (Courser)" loading="lazy">
+                    <p class="caption">Section de mise en avant des cours</p>
+                </div>
+                <div class="figma-gallery-item">
+                    <img src="figma-coursera-video.png" alt="Section de présentation des professeurs (Courser)" loading="lazy">
+                    <p class="caption">Section de mise en avant des cours</p>
+                </div>
+                <div class="figma-gallery-item">
+                    <img src="figma-coursera-vedio2.png" alt="Section de présentation des professeurs (Courser)" loading="lazy">
+                    <p class="caption">Section de mise en avant des cours</p>
+                </div>
+                <div class="figma-gallery-item">
+                    <img src="figma-courser-footer.png" alt="Page d'accueil de la plateforme Courser" loading="lazy">
+                    <p class="caption">Section Témoignages et Partenaires</p>
+                </div>
+                
+            </div>
+            
+        </section>
+        
+        <div class="back-link-wrapper">
+            <a href="index.html#projects" class="back-to-portfolio-btn"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+        </div>
+        
+    </main>
+    
+    <footer class="creative-footer">
+        <div class="footer-container">
+            <p class="copyright">Copyrights @ <span>Aya REGDOU</span></p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/aya-regdou-286660291" target="_blank" aria-label="Mon profil LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Le script JavaScript pour le menu mobile
+        const menuIcon = document.querySelector('.menu-icon');
+        const navigation = document.querySelector('.navigation');
+        menuIcon.addEventListener('click', () => {
+            navigation.classList.toggle('active');
+            const icon = menuIcon.querySelector('i');
+            if (navigation.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        document.querySelectorAll('.navigation a').forEach(link => {
+            link.addEventListener('click', () => {
+                navigation.classList.remove('active');
+                menuIcon.querySelector('i').classList.remove('fa-times');
+                menuIcon.querySelector('i').classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
