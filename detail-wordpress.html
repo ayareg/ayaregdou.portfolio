@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Détail Projet WordPress - Bistro Bohème - Aya REGDOU</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Portfo<span>lio</span></a>
+        <nav class="navigation">
+            <a href="index.html#about-section">À propos</a>
+            <a href="index.html#skills">Compétences</a>
+            <a href="index.html#projects">Projets</a>
+            <a href="index.html#Certificats">Certificats</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="menu-icon"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main>
+        
+        <section class="project-detail-hero second-project-hero">
+            <div class="hero-content">
+                <h1>Bistro Bohème</h1>
+                <p class="project-slogan">L'art de bien manger, l'esprit libre</p> 
+                
+                <p class="intro-description">Dans le cadre de mon développement des compétences en création de sites web, j'ai réalisé un projet personnel en développant un site WordPress pour Bistro Bohème, un restaurant qui modernise la cuisine traditionnelle dans une ambiance créative et chaleureuse.</p>
+                
+                <div class="project-metadata">
+                    <span><i class="fas fa-calendar-alt"></i> Date : 09/2025</span>
+                    <span><i class="fas fa-tools"></i> Outils : WordPress, Elementor</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section description-only-section">
+            <div class="section-content">
+                <h2 class="section-title">Concept et Réalisation</h2>
+                <div class="text-block">
+                    <ul>
+                        <li><i class="fas fa-code-branch"></i> **Thème personnalisé et Elementor :** Utilisation d’un thème flexible et d'Elementor pour un design fluide et créatif, tout en garantissant une interface responsive adaptée à tous les appareils.</li>
+                        <li><i class="fas fa-plug"></i> **Plugins Essentiels :** Intégration de plugins pour faciliter la gestion des réservations et améliorer l’expérience client (formulaire de contact, réservation en ligne).</li>
+                        <li><i class="fas fa-utensils"></i> **Contenu Gastronomique :** Structuration claire des menus et galerie d'images pour mettre en valeur les plats et l'ambiance du lieu.</li>
+                    </ul>
+                    
+                    <p class="highlight-point"><i class="fas fa-check-circle"></i> **Compétences clés démontrées :** Développement CMS (WordPress), Intégration de Builder (Elementor), Optimisation UX pour la restauration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section design-gallery-section">
+            <h2 class="section-title">Aperçu du Design</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="homepage.jpeg" alt="Page d'accueil du site">
+                    <p class="caption">Page d'accueil.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="aboutus.jpeg" alt="Page à propos du restaurant">
+                    <p class="caption">Section 'À propos'.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="staff.jpeg" alt="Section de l'équipe">
+                    <p class="caption">Présentation de l'équipe.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="menu.jpeg" alt="Page du menu">
+                    <p class="caption">Design de la carte/menu.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="contact.jpeg" alt="Page de contact et réservation">
+                    <p class="caption">Page Contact et Réservation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-separator">
+            <div class="separator-line"></div>
+            <div class="separator-line"></div>
+        </section>
+        
+        <div class="back-link-wrapper">
+            <a href="detail-web.html" class="back-to-portfolio-btn"><i class="fas fa-arrow-left"></i> Retour à l'aperçu des projets web</a>
+        </div>
+        
+    </main>
+    
+    <footer class="creative-footer">
+        <div class="footer-container">
+            <p class="copyright">Copyrights @ <span>Aya REGDOU</span></p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/aya-regdou-286660291" target="_blank" aria-label="Mon profil LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Le script JavaScript pour le menu mobile
+        const menuIcon = document.querySelector('.menu-icon');
+        const navigation = document.querySelector('.navigation');
+        menuIcon.addEventListener('click', () => {
+            navigation.classList.toggle('active');
+            const icon = menuIcon.querySelector('i');
+            if (navigation.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        document.querySelectorAll('.navigation a').forEach(link => {
+            link.addEventListener('click', () => {
+                navigation.classList.remove('active');
+                menuIcon.querySelector('i').classList.remove('fa-times');
+                menuIcon.querySelector('i').classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>

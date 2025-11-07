@@ -1,0 +1,2199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ================================================
+    CSS Custom Properties (Variables)
+================================================ */
+:root {
+    --color-primary-dark: #113F67; /* Bleu foncé - Principal */
+    --color-accent-orange: #432323; /* Orange vibrant - Accent */
+    --color-accent-muted-orange: #C66B3D; /* Orange/marron sourd pour les icônes */
+    --color-text-dark: #555; /* Gris foncé pour le texte */
+    --color-text-light: #fff; /* Blanc pour le texte clair */
+    --color-bg-light: #f9f9f9; /* Fond très clair */
+    --color-bg-medium: #f0f0f0; /* Fond gris moyen */
+    --color-gradient-start: #fdfcfb; /* Début du dégradé clair */
+    --color-gradient-end: #e2d1c3; /* Fin du dégradé ocre */
+    --color-black: #000; /* Noir pur */
+    --color-white: #fff; /* Blanc pur */
+    --color-red-quote: #FF5E5E; /* Rouge pour les guillemets */
+    --color-green-success: #28a745; /* Vert pour les éléments réussis */
+}
+/* ================================================
+    RESET & GLOBAL STYLES
+================================================ */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: clamp(14px, 2vw, 16px); /* Taille de base fluide */
+}
+
+/* ================================================
+    HEADER & NAVIGATION
+================================================ */
+header {
+    background-color:#113F67;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    top: 0;
+}
+
+body {
+    padding-top: 80px; /* Espace pour le header fixe */
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--color-accent-orange);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: clamp(1.5em, 5vw, 2.5em); /* Adaptation de la taille */
+}
+
+.logo span {
+    color: var(--color-white);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    color: var(--color-accent-orange);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+/* Responsive Design pour petits écrans */
+@media (max-width: 768px) {
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    .navigation a {
+        padding-left: 0;
+        margin: 10px 0;
+    }
+}
+
+/* ================================================
+    MAIN / HERO SECTION - STYLE ONE
+================================================ */
+.hero-style-one {
+    width: 100%;
+    min-height: 80vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-light);
+    padding: 80px 5vw;
+}
+
+.hero-style-one .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-style-one .left-side {
+    flex: 0 0 40%; 
+    display: flex;
+    justify-content: center;
+}
+
+.hero-style-one .profile-image-wrapper {
+    width: 250px; 
+    height: 350px;
+    border-radius: 50%; 
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-style-one .profile-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-style-one .right-side {
+    flex: 0 0 55%; 
+    text-align: left;
+    padding-left: 40px;
+}
+
+.hero-style-one .hero-title {
+    color: var(--color-accent-orange);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-style-one .hero-subtitle {
+    color: var(--color-primary-dark);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.hero-style-one .hero-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--color-accent-orange);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-style-one .hero-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-3px);
+}
+
+/* Réactivité pour les petits écrans */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    .navigation a {
+        padding-left: 1rem;
+    }
+    .hero-style-one {
+        padding: 60px 3vw;
+        min-height: auto;
+    }
+    .hero-style-one .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-style-one .left-side {
+        margin-bottom: 40px;
+    }
+    .hero-style-one .right-side {
+        padding-left: 0;
+        text-align: center;
+    }
+    .hero-style-one .hero-title {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+    .hero-style-one .hero-subtitle {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        white-space: normal;
+    }
+}
+/* Styles pour la Section Héro Contenant la Vidéo */
+.main.hero-style-one.video-background-hero {
+    position: relative; 
+    overflow: hidden; 
+    min-height: 80vh; /* S'assure que la section est suffisamment haute */
+    
+    /* 1. Amélioration du centrage du contenu dans la section */
+    display: flex;
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    
+    /* 2. Ajout de padding pour créer une marge intérieure pour le contenu */
+    padding: 60px 0; 
+}
+
+/* Styles pour la Vidéo elle-même (arrière-plan) */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    /* 3. Maintien de l'ajustement standard du fond couvrant (meilleure pratique) */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); 
+    z-index: 0; 
+    
+    /* 4. OPTIONNEL: Ajout d'un filtre sombre pour améliorer la lisibilité du texte */
+    filter: brightness(60%); 
+}
+
+/* Conteneur de Contenu (pour le faire apparaître par-dessus la vidéo) */
+.hero-content-overlay {
+    position: relative;
+    z-index: 1; /* Assure que le contenu est au-dessus de la vidéo */
+    width: 100%;
+    max-width: 1200px; /* Limite la largeur du contenu sur les grands écrans */
+    
+    /* 5. Réintroduction des marges internes pour le contenu dans son conteneur */
+    padding: 0 5vw; 
+}
+
+/* Si votre contenu est structuré en deux colonnes (left-side/right-side), 
+   ajoutez ces styles pour la mise en page de votre contenu : */
+.hero-content-overlay .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .hero-content-overlay .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* ================================================
+    GLOBAL TITLE STYLE
+================================================ */
+.title {
+    display: flex;
+    justify-content: center;
+    color: var(--color-accent-orange); 
+    font-size: clamp(2.5rem, 6vw, 3.5rem); 
+    margin-bottom: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    width: 80px; 
+    height: 5px;
+    background-color: var(--color-primary-dark);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    animation: lineAnim 2s infinite ease-in-out;
+}
+
+@keyframes lineAnim {
+    0% { width: 0; }
+    50% { width: 100px; }
+    100% { width: 0; }
+}
+
+
+/* ================================================
+    ABOUT SECTION (Creative Version)
+================================================ */
+#about-section.about-creative {
+    background-color: var(--color-bg-light); 
+    overflow: hidden; 
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#about-section .title {
+    color:#432323; 
+}
+#about-section .title::after {
+    background-color:#ff9800; 
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+    align-items: center;
+}
+
+.profile-intro {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    flex-shrink: 0; 
+    animation: fadeInScale 1s ease-out forwards; 
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.profile-image-container:hover .profile-image {
+    transform: scale(1.05);
+}
+
+.profile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; 
+}
+
+.profile-overlay span {
+    position: absolute;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--color-primary-dark); 
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    text-shadow: 0 0 5px rgba(255,255,255,0.7); 
+    white-space: nowrap;
+}
+
+.profile-image-container:hover .profile-overlay span {
+    opacity: 1;
+}
+
+/* Positionnement des spans de l'overlay */
+.profile-overlay span:nth-child(1) { top: 15%; left: 50%; transform: translateX(-50%) translateY(0); }
+.profile-image-container:hover .profile-overlay span:nth-child(1) { transform: translateX(-50%) translateY(-10px); }
+
+.profile-overlay span:nth-child(2) { bottom: 15%; left: 50%; transform: translateX(-50%) translateY(0); }
+.profile-image-container:hover .profile-overlay span:nth-child(2) { transform: translateX(-50%) translateY(10px); }
+
+.profile-overlay span:nth-child(3) { top: 50%; left: 10%; transform: translateY(-50%) translateX(0); }
+.profile-image-container:hover .profile-overlay span:nth-child(3) { transform: translateY(-50%) translateX(-10px); }
+
+.profile-overlay span:nth-child(4) { top: 50%; right: 10%; transform: translateY(-50%) translateX(0); }
+.profile-image-container:hover .profile-overlay span:nth-child(4) { transform: translateY(-50%) translateX(10px); }
+
+/* Animation d'apparition générale pour le conteneur */
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+.profile-text-intro {
+    flex: 1; 
+    max-width: 600px; 
+    text-align: left;
+    line-height: 1.8;
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+}
+
+.profile-text-intro p {
+    margin-bottom: 15px;
+    /* Styles d'animation retirés pour plus de simplicité, à réactiver si besoin */
+}
+
+.key-strengths {
+    width: 100%;
+    max-width: 800px; 
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.key-strengths h3 {
+    color: var(--color-accent-orange);
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.key-strengths ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    padding: 0;
+}
+
+.key-strengths ul li {
+    color: var(--color-primary-dark);
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f0f0f0; 
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.key-strengths ul li:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+}
+
+.key-strengths ul li .fas {
+    color: var(--color-accent-muted-orange);
+    font-size: 1.4em;
+    flex-shrink: 0; 
+}
+
+
+/* ===============================
+    PHILOSOPHY SECTION 
+================================= */
+#philosophy-section {
+    padding: 80px 5vw;
+    text-align: center;
+    background-color: var(--color-bg-light);
+}
+
+.philosophy {
+    font-size: clamp(1.2rem, 2.8vw, 1.8rem);
+    font-weight: 400;
+    color: var(--color-primary-dark);
+    font-style: italic;
+    margin: 40px auto 30px;
+    line-height: 1.8;
+    display: inline-block;
+    max-width: 700px;
+    position: relative;
+    white-space: normal;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    background: linear-gradient(to right, #fff, #fdfdfd);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+/* Apparition (géré par le script JS) */
+.philosophy.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Guillemets stylisés */
+.philosophy::before {
+    content: "“";
+    font-size: 4rem;
+    color: var(--color-red-quote);
+    position: absolute;
+    top: -40px;
+    left: -25px;
+    font-family: serif;
+    opacity: 0.6;
+}
+.philosophy::after {
+    content: "”";
+    font-size: 4rem;
+    color: var(--color-red-quote);
+    position: absolute;
+    bottom: -40px;
+    right: -25px;
+    font-family: serif;
+    opacity: 0.6;
+}
+@media (max-width: 768px) {
+    .philosophy {
+        font-size: 1.1rem;
+        padding: 20px 20px;
+    }
+    .philosophy::before,
+    .philosophy::after {
+        font-size: 2.5rem;
+        position: static;
+        display: inline-block;
+        margin: 0 6px;
+    }
+}
+/* ================================================
+    SKILLS SECTION
+================================================ */
+#skills {
+    padding: 80px 5vw;
+    background-color: var(--color-bg-light); 
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+#skills .title {
+    color:#432323; 
+}
+#skills .title::after {
+    background-color:#ff9800; 
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 30px; 
+    max-width: 1000px; 
+    margin: 50px auto 0; 
+}
+
+.skill-item {
+    background-color: var(--color-white);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px; 
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.skill-icon {
+    font-size: 3.5em; 
+    color: var(--color-accent-orange); 
+    margin-bottom: 15px;
+    line-height: 1; 
+}
+
+.skill-title-item {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--color-primary-dark); 
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+/* ================================================
+    PROJECTS SECTION (Créatif Amélioré)
+================================================ */
+.projects {
+    background-color: var(--color-bg-light);
+    padding: 80px 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.projects .title {
+    color: var(--color-accent-orange);
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: r elative;
+    padding-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projects .title::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 5px;
+    background-color: var(--color-primary-dark);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    animation: lineAnim 2s infinite ease-in-out;
+}
+
+@keyframes lineAnim {
+    0% { width: 0; }
+    50% { width: 100px; }
+    100% { width: 0; }
+}
+
+/* Grille des projets avec des cartes mieux organisées */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptation automatique selon la taille de l'écran */
+    gap: 2rem;
+    margin-top: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Cartes de projet */
+.project-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Effet de survol de la carte */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Effet léger au survol */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Info de projet */
+.project-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Titre du projet */
+.project-title {
+    color: var(--color-primary-dark);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Changer la couleur du titre au survol */
+.project-title:hover {
+    color: #ff9800;
+}
+
+/* Description du projet */
+.project-description {
+    color: #ff9800;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bouton pour voir les détails */
+.details-button-wrapper {
+    margin-top: auto;
+    color: #4caf50;
+}
+
+.details-btn {
+    font-size: 1.1em;
+    color:#546e7a;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.details-btn i {
+    font-size: 1.2em;
+}
+
+/* Changement de couleur du bouton au survol */
+.details-btn:hover {
+    color:#432323;
+}
+
+.details-btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color:#28a745;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.details-btn:hover::after {
+    transform: scaleX(1); /* Animer la ligne sous le bouton */
+}
+
+/* ===============================
+    RESPONSIVITY
+================================= */
+@media (max-width: 768px) {
+    .projects .content {
+        grid-template-columns: 1fr; /* Passer à une seule colonne sur les petits écrans */
+        gap: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.2rem; /* Réduire la taille du titre */
+    }
+
+    .project-description {
+        font-size: 0.9em;
+    }
+
+    .details-btn {
+        font-size: 1em; /* Ajuster la taille du bouton */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects .title {
+        font-size: clamp(2rem, 8vw, 3rem); /* Réduire la taille du titre sur très petit écran */
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+    }
+
+    .project-image {
+        height: 150px; /* Réduire la hauteur des images pour mobile */
+    }
+}
+/* ================================================
+    SECTION : CERTIFICATIONS & BÉNÉVOLAT (NOUVEAUX STYLES)
+================================================ */
+/* ==================================== */
+/* 1. Style de la section principale */
+/* ==================================== */
+
+.certifications-volunteering {
+    padding: 80px 5%; /* Plus de padding pour respirer */
+    background-color: #f8f9fa; /* Gris très clair, presque blanc */
+    font-family: 'Arial', sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.8em; /* Plus grand */
+    color: #432323; /* Bleu foncé (professionnel et impactant) */
+    margin-bottom: 50px;
+    position: relative;
+    display: block;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 60px; /* Petite barre au centre */
+    height: 4px;
+    background-color: #ff9800; /* Orange vif pour le contraste (énergie) */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 50px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certifications-list, .volunteering-list {
+    flex: 1; 
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.certifications-list h3, .volunteering-list h3 {
+    font-size: 1.6em;
+    color: #432323; /* Bleu moyen */
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* ==================================== */
+/* 2. Style des Certifications (Visuel Moderne) */
+/* ==================================== */
+
+.certifications-list {
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Ombre douce */
+}
+
+.certifications-grid-visual {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 25px;
+}
+
+.certification-visual-item {
+    display: flex;
+    align-items: center; /* Aligner verticalement */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; 
+    transition: all 0.3s ease-in-out;
+}
+
+.certification-visual-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02); /* Effet zoom subtil */
+}
+
+.cert-image {
+    width: 30%; 
+    height: 120px;
+    object-fit: cover;
+    filter: brightness(0.95); /* Légèrement assombrie pour un look pro */
+}
+
+.cert-info {
+    padding: 15px;
+    width: 70%; 
+}
+
+.cert-info h3 {
+    font-size: 1.25em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.cert-info p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.cert-source {
+    display: block;
+    font-weight: 600;
+    color: #95a5a6; 
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+/* ==================================== */
+/* 3. Style de l'Engagement Social (Cartes de Contraste) */
+/* ==================================== */
+
+.volunteering-list {
+    background-color: #f4f6f9; /* Légèrement plus foncé que le fond principal */
+    border: 1px solid #e0e0e0;
+}
+
+.volunteer-cards {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+.volunteer-item-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    /* Ombre subtile avec un liseré pour l'impact */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #ff9800; /* Liseré Orange Vif */
+    transition: background-color 0.3s;
+}
+
+.volunteer-item-card.has-certificate {
+    border-left-color: #4caf50; /* Liseré Vert pour une attestation */
+}
+
+.volunteer-item-card:hover {
+    background-color: #fffde7; /* Petit changement de couleur au survol */
+}
+
+.volunteer-item-card h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.15em;
+    margin-bottom: 8px;
+}
+
+.skills-demonstrated {
+    font-size: 0.9em;
+    color: #546e7a; /* Gris-bleu */
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dotted #e0e0e0;
+}
+
+.skills-demonstrated i {
+    color: #ff9800; /* Icône de médaille en orange vif */
+    margin-right: 8px;
+}
+
+/* ==================================== */
+/* 4. Média Queries (Adaptation mobile) */
+/* ==================================== */
+
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column; 
+        gap: 30px;
+    }
+    .certifications-volunteering {
+        padding: 40px 3%;
+    }
+    .certifications-list, .volunteering-list {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .certification-visual-item {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .cert-image {
+        width: 100%;
+        height: 150px;
+        border-radius: 8px 8px 0 0;
+    }
+    .cert-info {
+        width: 100%;
+        padding: 15px 10px;
+    }
+    .title {
+        font-size: 2.2em;
+    }
+}
+
+/* ================================================
+    CONTACT SECTION (Creative)
+================================================ */
+/* ================================================= */
+/* ----------------- PAGE DE CONTACT ----------------- */
+/* ================================================= */
+
+/* Les styles pour le Header/Navigation et le Body doivent être déjà définis */
+
+/* 1. SECTION FORMULAIRE DE CONTACT */
+.contact-form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajustez min-height si vous utilisez cette section directement sur la page principale */
+    min-height: 85vh; 
+    padding: 40px 20px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container h1 {
+    font-size: 2.5em;
+    color: #0d47a1; /* Bleu foncé principal */
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Ligne d'accentuation sous le titre */
+.form-container h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ff9800; /* Orange vif */
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Styles pour les groupes de champs */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; 
+}
+
+/* Effet au focus */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff9800; 
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Bouton d'envoi */
+.submit-btn {
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+/* Lien de retour au portfolio */
+.back-to-home {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.back-to-home:hover {
+    color: #f57c00;
+}
+
+
+/* ==================================== */
+/* 2. FOOTER CREATIF */
+/* ==================================== */
+
+.creative-footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    font-size: 0.9em;
+}
+
+.copyright span {
+    color: #ff9800;
+    font-weight: 600;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #0d47a1;
+}
+
+/* ==================================== */
+/* 3. MEDIA QUERIES (Adaptation mobile) */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation {
+        margin-top: 10px;
+    }
+}
+.contact-creative {
+    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2.5em, 5vw, 3.5em); 
+    color: var(--color-accent-orange); 
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, text-shadow 0.3s ease; 
+}
+
+.contact-title:hover {
+    transform: translateY(-5px);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info p {
+    color: var(--color-primary-dark); 
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.cta-coffee-btn {
+    display: inline-block;
+    background-color: var(--color-primary-dark); 
+    color: var(--color-white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    width: auto;
+    min-width: 150px;
+}
+
+.cta-coffee-btn:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    background-color: var(--color-accent-orange); 
+}
+
+.social-icon {
+    margin-top: 30px;
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.social-icon a {
+    color: var(--color-accent-muted-orange); 
+    font-size: 2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon a:hover {
+    color: var(--color-primary-dark); 
+    transform: scale(1.1); 
+}
+
+
+/* ================================================
+    FOOTER (Creative)
+================================================ */
+.creative-footer {
+    background-color: var(--color-black); 
+    color: var(--color-white);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.copyright {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.copyright span {
+    color: var(--color-accent-orange);
+    font-weight: 600;
+}
+
+.footer-social a {
+    color: var(--color-white);
+    font-size: 1.5em;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-accent-orange);
+}
+
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-social {
+        margin-top: 10px;
+    }
+}
+/* ================================================
+    STYLES DES PAGES DE DÉTAIL DE PROJET (detail-web.html)
+================================================ */
+
+/* --- HÉRO (Introduction) --- */
+.project-detail-hero {
+    /* Utilise une couleur de fond légèrement différente du blanc pour le contraste */
+    background: var(--color-bg-medium); 
+    padding: 60px 5vw;
+    
+    /* 1. Centre les BLOCS enfants (hero-content et hero-image-container) horizontalement */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* 2. Cibler spécifiquement le conteneur de texte pour garantir le centrage du contenu */
+.project-detail-hero .hero-content {
+    /* Centre le texte à l'intérieur de ce div */
+    text-align: center; 
+    /* Assure que le bloc ne soit pas trop large et puisse être centré si besoin (optionnel) */
+    max-width: 900px; 
+    width: 100%;
+}
+
+.project-detail-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color:#432323;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intro-description {
+    max-width: 800px;
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0 auto 30px auto; /* Ajoute 'auto' pour centrer ce paragraphe lui-même */
+    text-align: center;
+}
+
+.project-metadata {
+    /* Ce flexbox doit être centré dans son parent (hero-content) ce qui est fait par text-align: center; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les éléments à l'intérieur du conteneur project-metadata */
+    gap: 20px 40px;
+    margin-bottom: 30px;
+}
+
+.project-metadata span {
+    font-size: 1em;
+    color: var(--color-accent-muted-orange); 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-main-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); 
+}
+/* ================================================
+    STYLES : CONCEPTION & MAQUETTAGE FIGMA (detail-web.html)
+================================================ */
+
+.design-process-section {
+    background-color: var(--color-white); /* Fond blanc pour bien faire ressortir les maquettes */
+}
+
+.figma-gallery-grid {
+    display: grid;
+    /* Trois colonnes pour présenter les étapes clés */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.figma-gallery-item {
+    background-color: var(--color-bg-light); 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.figma-gallery-item:hover {
+    transform: translateY(-3px);
+}
+
+.figma-gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid var(--color-accent-orange); /* Ligne de séparation visuelle */
+}
+
+.figma-gallery-item .caption {
+    padding: 15px;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    text-align: center;
+}
+
+/* Style pour le lien Figma (utilise le style du hero-button mais avec couleur primaire) */
+.figma-link-block .hero-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.figma-link-block .hero-button:hover {
+    background-color: var(--color-accent-orange);
+}
+/* ================================================= */
+/* NOUVEAU STYLE CRÉATIF pour l'APERÇU FIGMA */
+/* ================================================= */
+
+/* Conteneur principal: Centré et avec un look "carte" */
+.figma-preview-wrapper {
+    /* Rendu plus compact */
+    max-width: 650px; 
+    margin: 40px auto;
+    padding: 40px 30px; 
+    border-radius: 20px; /* Coins plus arrondis */
+    
+    /* Look moderne */
+    background-color: #ffffff; 
+    border: 2px solid #e0e0e0; /* Bordure fine et élégante */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Ombre flottante douce */
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Emplacement et style de l'icône Figma */
+.figma-icon-placeholder {
+    margin-bottom: 30px;
+    padding: 15px;
+    
+    /* L'icône elle-même */
+    color: #FF7262; /* Le rouge-orangé de Figma */
+    font-size: 5em; /* Taille légèrement réduite */
+    
+    /* Ajout d'un cercle autour de l'icône */
+    border: 3px solid #FF7262; 
+    border-radius: 50%;
+    
+    /* Style et animation subtile */
+    transition: all 0.4s ease-in-out;
+}
+
+.figma-icon-placeholder:hover {
+    /* Au survol, le cercle se remplit légèrement */
+    background-color: rgba(255, 114, 98, 0.1); 
+    transform: scale(1.05);
+}
+
+/* ------------------ */
+/* STYLES du BOUTON CTA (figma-cta) */
+/* ------------------ */
+
+.cta-button {
+    /* Base de style */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px; /* Moins haut */
+    text-decoration: none;
+    border-radius: 8px; /* Moins arrondi que la pilule, plus carré/moderne */
+    font-weight: 500; /* Moins gras */
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+}
+
+.figma-cta {
+    /* Couleurs inspirées du Design UI/UX */
+    background-color: #1a73e8; /* Un bleu plus profond et professionnel (Googly) */
+    color: white;
+}
+
+.figma-cta i {
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.figma-cta:hover {
+    background-color: #0c63d5; /* Assombrissement au survol */
+    transform: translateY(-1px); /* Soulèvement subtil */
+    box-shadow: 0 4px 10px rgba(26, 115, 232, 0.3); /* Ombre de couleur */
+}
+
+.figma-cta:hover i {
+    transform: translateX(3px); 
+}
+.figma-gallery-item {
+    position: relative;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.figma-gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Règle pour les appareils mobiles */
+@media (max-width: 768px) {
+    .figma-preview-wrapper {
+        max-width: 90%;
+        padding: 30px 15px;
+    }
+    .figma-icon-placeholder {
+        font-size: 4em; 
+    }
+}
+
+/* --- MEDIA QUERIES pour la section Héro --- */
+@media (max-width: 768px) {
+    .project-metadata {
+        /* Empile les métadonnées sur mobile */
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Vous avez retiré le project-tag dans l'HTML final, mais je garde le style au cas où */
+.project-tag {
+    display: inline-block;
+    background-color: var(--color-accent-orange);
+    color: var(--color-white);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.intro-description {
+    max-width: 800px;
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+    line-height: 1.6;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.project-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 40px;
+    margin-bottom: 30px;
+}
+
+.project-metadata span {
+    font-size: 1em;
+    /* Couleur sourde pour les icônes/métadonnées */
+    color: var(--color-accent-muted-orange); 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-main-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    /* Ombre subtile pour mettre en évidence l'image */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); 
+}
+
+/* --- SECTIONS GÉNÉRALES --- */
+.project-section {
+    padding: 80px 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Alternance des fonds pour la séparation visuelle */
+.project-section:nth-of-type(3) { /* Cible la section description */
+    background-color: var(--color-white);
+}
+
+.project-section:nth-of-type(4) { /* Cible la section galerie */
+    background-color: var(--color-bg-light);
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-accent-orange);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Styles pour le bloc de description simple */
+.text-block {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+.text-block p {
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.text-block ul {
+    list-style: none; /* Enlève les puces par défaut */
+    padding-left: 0;
+    margin: 20px 0;
+}
+.text-block ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-dark);
+    font-size: 1.05em;
+    padding: 5px 0;
+    font-weight: 500;
+}
+.text-block ul li i {
+    color: var(--color-primary-dark);
+    font-size: 1.2em;
+}
+
+
+.highlight-point {
+    font-weight: 600;
+    border-left: 4px solid var(--color-accent-orange);
+    padding: 15px 20px;
+    background-color: #fff8e1; /* Couleur très claire rappelant l'orange */
+    margin-top: 25px;
+    font-style: italic;
+}
+
+.highlight-point i {
+    color: var(--color-green-success);
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* --- SECTION GALERIE --- */
+/* Grille de la galerie */
+.gallery-grid-design {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adaptatif */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Images de la galerie */
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bord arrondi */
+    object-fit: cover; /* Assure une couverture de l'image */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+/* Effet au survol de l'image */
+.gallery-item-design:hover .gallery-image {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+/* Cartes de compétences */
+.key-point-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.key-point-card i {
+    font-size: 30px;
+    color: #4CAF50;
+}
+
+.key-point-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.design-gallery-section {
+    text-align: center;
+}
+.gallery-grid {
+    display: grid;
+    /* 2 colonnes sur mobile, 4 colonnes sur desktop */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    /* Pour s'assurer que toutes les images ont une hauteur similaire */
+    height: 250px; 
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+.gallery-item p {
+    padding: 15px;
+    font-style: italic;
+    color: var(--color-text-dark);
+    font-size: 0.9em;
+}
+
+/* --- LIEN RETOUR --- */
+.back-link-wrapper {
+    text-align: center;
+    padding: 40px 0;
+    /* Assure une transition douce entre la dernière section et le footer */
+    background-color: var(--color-bg-light); 
+}
+
+.back-to-portfolio-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-accent-orange);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-to-portfolio-btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+
+/* --- MEDIA QUERIES (Responsivité pour la page de détail) --- */
+@media (max-width: 768px) {
+    .project-metadata {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .gallery-grid {
+        /* 1 colonne sur les écrans plus petits */
+        grid-template-columns: 1fr; 
+    }
+    .gallery-item img {
+        /* Ajustement de la hauteur sur mobile */
+        height: 200px; 
+    }
+}
+/* ================================================= */
+/* STYLES pour la SECTION de Téléchargement PDF */
+/* ================================================= */
+
+.cta-pdf-section {
+    padding: 60px 20px;
+}
+
+.pdf-cta-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f7f9fc; /* Fond très clair */
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    
+    /* Layout Flexbox pour aligner l'icône, le texte et le bouton */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.pdf-icon-container {
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+}
+
+.pdf-icon-container .fa-file-pdf {
+    font-size: 3em;
+    color: #e74c3c; /* Rouge vif pour le PDF */
+}
+
+.pdf-info {
+    flex-grow: 1; /* Le texte prend l'espace restant */
+    text-align: left;
+}
+
+.pdf-info .section-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.pdf-info p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Style du bouton Télécharger (réutilisation de .cta-button) */
+.download-pdf-btn {
+    flex-shrink: 0;
+    background-color: #e74c3c; /* Rouge (couleur PDF) */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-pdf-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.download-pdf-btn .fa-download {
+    margin-left: 10px;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .pdf-cta-wrapper {
+        flex-direction: column; /* Empile les éléments verticalement */
+        text-align: center;
+        gap: 20px;
+    }
+    .pdf-info {
+        text-align: center;
+    }
+}
+/* ================================================
+    6. STYLES DES PAGES DE DÉTAIL DESIGN (detail-ca.html)
+    Style: Créatif et Élégant
+    
+    CE BLOC N'UTILISE QUE LES VARIABLES GLOBALES DÉFINIES AILLEURS.
+================================================ */
+
+/* --- HÉRO Design (Section d'introduction) --- */
+.design-hero {
+    background-color: var(--color-white);
+    padding: 100px 5vw 80px 5vw;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 60px; 
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content-design {
+    padding-right: 20px;
+    color: #432323;
+}
+
+/* Tag créatif (couleur différente pour cette page) */
+.project-tag.tag-creative {
+    display: inline-block;
+    /* Utilisation du gradient pour l'effet créatif */
+    background: linear-gradient(45deg, var(--color-accent-orange), #ffc107); 
+    color: var(--color-white);
+    padding: 6px 18px;
+    border-radius: 25px; 
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.4); 
+}
+
+.hero-content-design h1 {
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    color:#432323;
+    margin-top: 15px;
+    line-height: 1.1;
+    font-weight: 900; 
+    text-align: center;
+}
+
+.intro-description {
+    font-size: 1.15em;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.project-metadata-elegant {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+    border-left: 5px solid var(--color-primary-dark);
+    padding-left: 25px;
+    background-color: var(--color-bg-light); 
+    padding: 20px 25px;
+    border-radius: 0 8px 8px 0; 
+}
+
+.project-metadata-elegant span {
+    font-size: 1em;
+    color: var(--color-text-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.project-metadata-elegant i {
+    color: var(--color-accent-orange);
+    font-size: 1.2em;
+}
+
+.hero-image-container-design {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transform: rotate(1deg); /* Légère inclinaison créative */
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image-container-design:hover {
+    transform: rotate(0deg); 
+}
+
+.project-main-image-design {
+    width: 100%;
+    display: block;
+}
+
+/* --- SECTIONS GÉNÉRALES --- */
+.design-section {
+    padding: 80px 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-design {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color:#0d47a1;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title-design::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    text-align: center;
+    background-color:white;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* --- SECTION RÔLE & OBJECTIFS --- */
+.role-and-objectifs {
+    background-color: var(--color-bg-light);
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.objective-card {
+    background-color: var(--color-white);
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.objective-card h3 {
+    font-size: 1.6em;
+    color: var(--color-primary-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+}
+
+.objective-card i {
+    color: var(--color-accent-orange);
+}
+
+.objective-card ul {
+    list-style: none;
+    padding: 0;
+}
+.objective-card ul li {
+    font-weight: 500;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.objective-card ul li i {
+    color: var(--color-green-success);
+    font-size: 1em;
+}
+
+.text-block-design p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+/* --- SECTION GALERIE PRINCIPALE --- */
+.design-gallery-principal {
+    background-color: var(--color-white);
+}
+
+.gallery-grid-design {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: minmax(auto, 1fr);
+    gap: 25px;
+}
+
+.gallery-item-design {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item-design:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item-design img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s;
+}
+
+.gallery-item-design .caption {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+/* --- SECTION KEY TAKEAWAYS (Points Clés) --- */
+.key-takeaways {
+    background-color: var(--color-bg-light);
+}
+
+.key-points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.key-point-card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-bottom: 5px solid var(--color-primary-dark);
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.key-point-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-bottom-color: var(--color-accent-orange);
+}
+
+.key-point-card i {
+    font-size: 3em;
+    color: var(--color-accent-orange);
+    margin-bottom: 15px;
+}
+
+.key-point-card h3 {
+    font-size: 1.4em;
+    color: var(--color-primary-dark);
+    margin-bottom: 10px;
+}
+
+/* --- MEDIA QUERIES (Responsivité) --- */
+@media (max-width: 992px) {
+    .design-hero {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    .hero-image-container-design {
+        transform: rotate(0deg); 
+    }
+    .content-wrapper {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+    .gallery-grid-design {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-grid-design {
+        grid-template-columns: 1fr; 
+    }
+}
